@@ -12,7 +12,43 @@ Once the contents of the target user's directory is copied to your specified dir
 
 The save-only module will be the entry point to execute a profile backup. The zipup module will zip up the target users profile, the logwrite module will allow logging to be outputted to a log file in the directory that the module is ran from.
 
+Save-Only Cmdlet Options
+=================
+
+-userpath - The path to the target user you want to backup.
+
+-pass - Password to be used when the profile is zipped up and encrypted.
+
+-raw_profile - Storage location of copied profile information.
+
+-profile_store - Location to store zipped profile.
+
+-Logfile - Log file location by default this will be in the location that the script is executed from.
+
+Zipup Cmdlet Options
+=================
+
+-location - path to directory/file that will be zipped. This is passed in from the save-only module if the save-only module is ran.
+
+-PlainPassword - password string in plaintext. This is passed in from the save-only module if the save-only module is ran.
+
+-securepath - path to a securestring password file by default this looks at a file called passtime.txt in the root directory for where the module was executed.
+
+-store_loc - storage location for zipped file. This is passed in from the save-only module if the save-only module is ran.
+
+-isprofile - switch to determine whether the location param is a file or directory, by default this is set to true and will run as a directory.
+
+-Logfile - location of where the logfile is stored. 
+
+LogWrite Cmdlet Options
+=================
+
+-logstring - String that is passed in to be written to the logfile.
+
+-logfile - location of logfile.
+
 Examples
 =================
 
 `save-only -userpath C:\Users\TargetUser -pass EncryptionPass -raw_profile Locationtostorecopiedprofile -profile_store zipfilestorelocation`
+
