@@ -52,3 +52,12 @@ Examples
 
 `save-only -userpath C:\Users\TargetUser -pass EncryptionPass -raw_profile Locationtostorecopiedprofile -profile_store zipfilestorelocation`
 
+
+Requirements
+=================
+
+7zip application is required to run this script.
+
+This script must be ran as an admin user on the target machine.
+
+The modules must all be in the same directory in order for the save-only module to work correctly.
